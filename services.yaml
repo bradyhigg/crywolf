@@ -1,0 +1,25 @@
+services:
+  github-actions:
+    status_page: https://www.githubstatus.com
+    subreddits: [github, devops]
+    keywords: ["github actions down"]
+    github_repos: [actions/runner-images, actions/runner]
+    bluesky_queries: ["github actions down"]
+    hackernews_queries: ["github actions down"]
+  gitlab:
+  codeberg:
+  artifactory:
+  aws:
+  gcp:
+  azure:
+  ibm-cloud:
+  okta:
+  terraform-cloud:
+  hcp:
+  vault:
+  prometheus:
+  datadog:
+  jira:
+  incident.io:
+  pagerduty:
+  npm:
