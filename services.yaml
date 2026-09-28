@@ -1,6 +1,7 @@
 services:
   github-actions:
-    status_page: https://www.githubstatus.com
+    statuspage: https://www.githubstatus.com
+    status_page_specific: Actions
     subreddits: [github, devops]
     keywords: ["github actions down"]
     github_repos: [actions/runner-images, actions/runner]
@@ -23,3 +24,5 @@ services:
   incident.io:
   pagerduty:
   npm:
+    statuspage: https://status.npmjs.org/
+  datadog:
