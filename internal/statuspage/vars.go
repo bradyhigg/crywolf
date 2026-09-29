@@ -5,7 +5,7 @@ import "time"
 
 const statusPage = "%s/api/v2/summary.json"
 
-
+// Structs for reading statuspage API
 type Summary struct {
     Components []Component `json:"components"`
     Incidents  []Incident  `json:"incidents"`
@@ -28,6 +28,10 @@ type Incident struct {
     Shortlink string `json:"shortlink"`
 }
 
+// return type structs
 type Status struct {
-
+    IsIncident bool
+    OtherIncient bool
+    isInvestigating bool
+    IncidentDocumentedTime *time.Time
 }
