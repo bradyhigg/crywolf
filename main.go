@@ -2,9 +2,8 @@ package main
 
 import (
 	"embed"
-	"fmt"
 
-	"github.com/bradyhigg/crywolf/internal/statuspage"
+	"github.com/bradyhigg/crywolf/internal/bluesky"
 )
 
 var (
@@ -13,12 +12,12 @@ var (
 )
 
 func main(){
-
+	bluesky.Query()
 	// data, _ := f.ReadFile("services.yaml")
 	// print(string(data))
-	msg, isIncident, _ := statuspage.GetStatus("https://www.githubstatus.com","Actions")
-	fmt.Println(msg)
-	fmt.Println(isIncident)
+	// msg, isIncident, _ := statuspage.GetStatus("https://www.githubstatus.com","Actions")
+	// fmt.Println(msg)
+	// fmt.Println(isIncident)
 
 	// resp, err := http.Get("https://www.reddit.com/r/Terraform/new/.rss?limit=10")
 	// if err != nil {
