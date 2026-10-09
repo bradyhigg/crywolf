@@ -3,7 +3,8 @@ services:
     statuspage: https://www.githubstatus.com
     status_page_specific: Actions
     subreddits: [github, devops]
-    keywords: ["github actions down"]
+    keyword: "github actions"
+    keywords: ["stuck in queued", "runners not picking up"]
     github_repos: [actions/runner-images, actions/runner]
     bluesky_queries: ["github actions down"]
     hackernews_queries: ["github actions down"]

@@ -1,7 +1,9 @@
 package main
 
 import (
+	"context"
 	"embed"
+	"fmt"
 
 	"github.com/bradyhigg/crywolf/internal/bluesky"
 )
@@ -12,7 +14,18 @@ var (
 )
 
 func main(){
-	bluesky.Query()
+	ctx := context.Background()
+	client, err := bluesky.Login(ctx)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	posts, _ := bluesky.Query("github down",client,ctx)
+	for _,post := range posts {
+		fmt.Println("------------")
+		fmt.Println(post.PostDate)
+		fmt.Println(post.Text)
+	}
 	// data, _ := f.ReadFile("services.yaml")
 	// print(string(data))
 	// msg, isIncident, _ := statuspage.GetStatus("https://www.githubstatus.com","Actions")
